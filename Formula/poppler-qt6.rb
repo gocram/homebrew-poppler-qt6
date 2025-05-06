@@ -10,6 +10,11 @@ class PopplerQt6 < Formula
     formula "poppler"
   end
 
+  bottle do
+    root_url "https://github.com/gocram/homebrew-poppler-qt6/releases/download/poppler-qt6-25.05.0"
+    sha256 arm64_sonoma: "596e0eb58a503dc9135d319fc39cc6c2f9bb46392f863efd3b77de1cdd3dfc1f"
+  end
+
   keg_only "it conflicts with poppler"
 
   depends_on "cmake" => :build
