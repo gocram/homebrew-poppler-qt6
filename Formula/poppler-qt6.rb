@@ -7,7 +7,8 @@ class PopplerQt6 < Formula
   head "https://gitlab.freedesktop.org/poppler/poppler.git", branch: "master"
 
   livecheck do
-    formula "poppler"
+    url :homepage
+    regex(/href=.*?poppler[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   bottle do
