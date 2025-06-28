@@ -14,3 +14,6 @@ https://github.com/orgs/Homebrew/discussions/1771
 ## Documentation
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+
+### Reference
+https://brew.sh/2020/11/18/homebrew-tap-with-bottles-uploaded-to-github-releases/

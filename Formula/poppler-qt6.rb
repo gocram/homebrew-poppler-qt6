@@ -1,19 +1,14 @@
 class PopplerQt6 < Formula
   desc "PDF rendering library (based on the xpdf-3.0 code base) with QT6 support"
   homepage "https://poppler.freedesktop.org/"
-  url "https://poppler.freedesktop.org/poppler-25.05.0.tar.xz"
-  sha256 "9b1627c5b76816ac5e4052a03f5b605ba40b45cf06b02cadd0479620b499ab38"
+  url "https://poppler.freedesktop.org/poppler-25.06.0.tar.xz"
+  sha256 "8199532d38984fab46dbd0020ec9c40f20e928e33e9b4cc6043572603a821d83"
   license "GPL-2.0-only"
   head "https://gitlab.freedesktop.org/poppler/poppler.git", branch: "master"
 
   livecheck do
     url :homepage
     regex(/href=.*?poppler[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
-  bottle do
-    root_url "https://github.com/gocram/homebrew-poppler-qt6/releases/download/poppler-qt6-25.05.0"
-    sha256 arm64_sonoma: "596e0eb58a503dc9135d319fc39cc6c2f9bb46392f863efd3b77de1cdd3dfc1f"
   end
 
   keg_only "it conflicts with poppler"
