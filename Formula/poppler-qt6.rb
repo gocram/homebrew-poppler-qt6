@@ -11,6 +11,11 @@ class PopplerQt6 < Formula
     regex(/href=.*?poppler[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/gocram/homebrew-poppler-qt6/releases/download/poppler-qt6-25.06.0"
+    sha256 arm64_sonoma: "c727b42e65f92d30ab753c3ea0aeccf7c9230e95a6583d134d4263fcdde99075"
+  end
+
   keg_only "it conflicts with poppler"
 
   depends_on "cmake" => :build
