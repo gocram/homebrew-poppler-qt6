@@ -48,7 +48,7 @@ jobs:
           echo "::add-mask::${base64_token}"
           echo "token=${base64_token}" >> "${GITHUB_OUTPUT}"
 
-      - run: brew test-bot --only-formulae#{" --root-url=#{root_url}" if root_url}
+      - run: brew test-bot --only-formulae --root-url='gocram/poppler-qt6'
         if: github.event_name == 'pull_request'
         env:
           HOMEBREW_DOCKER_REGISTRY_TOKEN: ${{ steps.base64-encode.outputs.token }}
