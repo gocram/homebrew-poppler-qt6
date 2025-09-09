@@ -11,6 +11,11 @@ class PopplerQt6 < Formula
     regex(/href=.*?poppler[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/gocram/poppler-qt6"
+    sha256 arm64_sonoma: "889f2ab1d4211147a606292af0a94b6fc7b03999d27050ca8cad93702e3a511a"
+  end
+
   keg_only "it conflicts with poppler"
 
   depends_on "cmake" => :build
