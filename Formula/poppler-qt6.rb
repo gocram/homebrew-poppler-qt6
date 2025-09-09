@@ -1,19 +1,14 @@
 class PopplerQt6 < Formula
   desc "PDF rendering library (based on the xpdf-3.0 code base) with QT6 support"
   homepage "https://poppler.freedesktop.org/"
-  url "https://poppler.freedesktop.org/poppler-25.06.0.tar.xz"
-  sha256 "8199532d38984fab46dbd0020ec9c40f20e928e33e9b4cc6043572603a821d83"
+  url "https://poppler.freedesktop.org/poppler-25.09.1.tar.xz"
+  sha256 "0c1091d01d3dd1664a13816861e812d02b29201e96665454b81b52d261fad658"
   license "GPL-2.0-only"
   head "https://gitlab.freedesktop.org/poppler/poppler.git", branch: "master"
 
   livecheck do
     url :homepage
     regex(/href=.*?poppler[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
-  bottle do
-    root_url "https://github.com/gocram/homebrew-poppler-qt6/releases/download/poppler-qt6-25.06.0"
-    sha256 arm64_sonoma: "c727b42e65f92d30ab753c3ea0aeccf7c9230e95a6583d134d4263fcdde99075"
   end
 
   keg_only "it conflicts with poppler"
@@ -28,6 +23,7 @@ class PopplerQt6 < Formula
   depends_on "gettext"
   depends_on "glib"
   depends_on "gpgme"
+  depends_on "gpgmepp"
   depends_on "jpeg-turbo"
   depends_on "libpng"
   depends_on "libtiff"
